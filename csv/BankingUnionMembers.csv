@@ -1,0 +1,33 @@
+country,id,membership
+Austria,AUT,3
+Belgium,BEL,3
+Bulgaria,BGR,2
+Switzerland,CHE,1
+Cyprus,CYP,3
+Czech Republic,CZE,2
+Germany,DEU,3
+Denmark,DN1,2
+Estonia,EST,3
+Finland,FI1,3
+France,FR1,3
+Spain,ESP,3
+United Kingdom,GB1,2
+Greece,GRC,3
+Croatia,HRV,2
+Hungary,HUN,2
+Iceland,ISL,1
+Ireland,IRL,3
+Italy,ITA,3
+Latvia,LVA,3
+Liechtenstein,LIE,1
+Lithuania,LTU,3
+Luxemborg,LUX,3
+Malta,MLT,3
+Netherlands,NL1,3
+Norway,NOR,1
+Poland,POL,2
+Portugal,PRT,3
+Romania,ROU,2
+Slovakia,SVK,3
+Slovenia,SVN,3
+Sweden,SWE,2
