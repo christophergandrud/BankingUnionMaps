@@ -1,5 +1,5 @@
 ######################################
-# Banking Union Data
+# Banking Union Data Gathering
 # Christopher Gandrud
 # 28 December 2014
 ######################################
@@ -10,6 +10,7 @@ setwd('/git_repositories/BankingUnionMaps/')
 # Load packages
 library(dplyr)
 library(WDI)
+library(DataCombine)
 
 # Load data set of Banking Union Membership
 membership <- read.csv('csv/BankingUnionMembers.csv', stringsAsFactors = FALSE)
@@ -35,6 +36,12 @@ wdi <- rename(wdi, wdi_gdp_growth = NY.GDP.MKTP.KD.ZG,
               wdi_domestic_credit = FS.AST.DOMS.GD.ZS,
               wdi_liquid_reserves_ratio = FD.RES.LIQU.AS.ZS
               )
+
+# Combine with membership data, NOTE: membership as of 1 January 2015
+wdi<- inner_join(wdi, membership[, -1], by = 'iso2c') %>%
+        MoveFront(c('country', 'iso2c', 'id', 'year', 'membership'))
+
+write.csv(wdi, file = 'csv/WorldBankData.csv', row.names = FALSE)
 
 #### ECB Consolidated Banking Data
 # http://www.ecb.europa.eu/stats/money/consolidated/html/index.en.html
