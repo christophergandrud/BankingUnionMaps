@@ -43,27 +43,26 @@ ssm_average$membership <- 3
 
 main_domestic_credit <- rbind(main_domestic_credit, ssm_average)
 
-main_domestic_credit$highlight <- 'Other'
+main_domestic_credit$highlight <- 'Indv. European\n Countries'
 main_domestic_credit$highlight[main_domestic_credit$country == 'SSM Median'] <- 'SSM Median'
 main_domestic_credit$highlight[main_domestic_credit$country == 'United States'] <- 'United States'
 main_domestic_credit$highlight[main_domestic_credit$country == 'Japan'] <- 'Japan'
 
 main_domestic_credit$thickness <- 0
-main_domestic_credit$thickness[main_domestic_credit$highlight != 'Other'] <- 1
+main_domestic_credit$thickness[main_domestic_credit$highlight != 'Indv. European\n Countries'] <- 1
 
 ggplot(main_domestic_credit, 
        aes(year, domestic_credit_100, group = country, color = highlight, 
            size = thickness, alpha = thickness)) +
     geom_line() +
     scale_y_continuous(breaks = c(40, 80, 100, 120, 160)) +
-    scale_color_manual(values = c('Other' = '#c7c7c7',
+    scale_color_manual(values = c('Indv. European\n Countries' = '#c7c7c7',
                                   'SSM Median' = '#3182bd',
                                   'United States' = '#e6550d',
-                                  'Japan' = '#31a354'),
-                       guide = guide_legend(title = NULL, reverse = TRUE)) +
+                                  'Japan' = '#31a354')) +
     geom_hline(yintercept = 100, linetype = 'dotted') +
     scale_alpha(range = c(0.3, 1)) +
-    guides(alpha = FALSE, 
-           size =  FALSE) +
-    xlab('') + ylab('Domestic credit provided by\n financial sector vs. 2007\n') +
-    theme_bw(base_size = 20)
+    guides(colour = guide_legend(override.aes = list(size = 2), title = NULL, reverse = TRUE),
+        alpha = FALSE, size = FALSE) +
+    xlab('') + ylab('Change in domestic credit provided by\n financial sector\n') +
+    theme_bw(base_size = 15)
