@@ -50,8 +50,7 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
 
     // Loop through each country / key
     dataNest.forEach(function(d) {
-        var six = d.values[6];
-        var position = six.credit;
+        var position = d.values[6].credit;
         console.log("Selected Value", position);
 
         svg.append("path")
