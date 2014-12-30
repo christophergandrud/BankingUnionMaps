@@ -1,56 +1,140 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<style>
+<style> /* set the CSS */
+
+body { font: 12px Arial;}
+
+path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
 
 </style>
 <body>
+
+<!-- load the d3.js library -->
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
+
 <script>
 
-    var width = 960,
-        height = 1160;
+// Set the dimensions of the canvas / graph
+var margin = {top: 30, right: 20, bottom: 30, left: 100},
+    width = 700 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
-    var projection = d3.geo.mercator()
-        .center([20, 39])
-        .scale(800)
-        .rotate([15, 0])
-        .translate([width / 2, height / 2]);
+// Parse the year / time
+var parseDate = d3.time.format("%b %Y").parse;
 
-        var color = d3.scale.ordinal()
-            .domain([0,1,2,3])
-            .range(["#fff","#c6dbef","#6baed6","#3182bd"]);
+// Set the ranges
+var x = d3.time.scale().range([0, width]);
+var y = d3.scale.linear().range([height, 0]);
 
+// Define the axes
+var xAxis = d3.svg.axis().scale(x)
+    .orient("bottom").ticks(5);
 
-    var path = d3.geo.path()
-        .projection(projection);
+var yAxis = d3.svg.axis().scale(y)
+    .orient("left").ticks(5);
 
-    var svg = d3.select("body").append("svg")
-        .attr("width", width)
-        .attr("height", height);
+// Define the line
+var priceline = d3.svg.line()
+    .x(function(d) { return x(d.year); })
+    .y(function(d) { return y(d.wdi_domestic_credit); });
 
-    d3.json("json/europeClean.json", function(error, europe) {
-        d3.csv("csv/BankingUnionMembers.csv", function(error, Membership){
-            var rateById = {};
-            Membership.forEach(function (d) {
-                rateById[d.id] = d.membership;
-            });
+// Adds the svg canvas
+var svg = d3.select("body")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
 
-        var subunits = topojson.feature(europe, europe.objects.subunits);
+// Get the data
+d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
+    data.forEach(function(d) {
+        d.year = parseDate(d.year);
+        d.wdi_domestic_credit = +d.wdi_domestic_credit;
+    });
+
+    // Scale the range of the data
+    x.domain(d3.extent(data, function(d) { return d.year; }));
+    y.domain([0, d3.max(data, function(d) { return d.wdi_domestic_credit; })]);
+
+    // Nest the entries by country
+    var dataNest = d3.nest()
+        .key(function(d) {return d.country;})
+        .entries(data);
+
+    // Loop through each country / key
+    dataNest.forEach(function(d) {
+
+        var lines = svg.selectAll(".values")
+        .data(dataNest)
+        .enter().append("g")
+        .attr("class", "lines");
 
         svg.append("path")
-            .datum(subunits)
-            .attr("d", path);
-
-        svg.selectAll(".subunit")
-            .data(topojson.feature(europe, europe.objects.subunits).features)
-            .enter().append("path")
-            .attr("d", path)
-//            .attr("class", function(d) { return "subunit " + d.id; })
-            .style("fill", function(d) {
-                return color(rateById[d.id])
+            .attr("class", "line")
+            .attr("d", priceline(d.values))
+            .style("stroke-opacity", 0.2)
+            .style("stroke-width", 1)
+            .on("mouseover", function(d) {
+                d3.select(this)
+                .style("stroke-opacity", 1)
+                .style("stroke-width", 10)
+            ;
+            })
+            .on("mouseout", function(d) {
+                d3.select(this)
+                .transition().duration(750)
+                .style("stroke-opacity", 0.2)
+                .style("stroke-width", 1)
+                ;
             });
+        ;
+        svg.append("text")
+        .on("mouseover", function(d) {
+            d3.select(this)
+            .attr("x", 3)
+            .attr("dy", ".35em")
+            .text(d.key);
         });
     });
 
+    // Add the X Axis
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    // Add the Y Axis
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+    // Add Y Axis label
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", "-4em")
+        .style("text-anchor", "end")
+        .style("font-size", 15)
+        .text("Domestic Credit Provided by the Financial Sector");
+
+});
+
 </script>
+</body>
