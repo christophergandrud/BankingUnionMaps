@@ -1,220 +1,220 @@
-"country","year","wdi_domestic_credit"
-"Austria","Jan 2007",100
-"Austria","Jan 2008",102.9
-"Austria","Jan 2009",109.8
-"Austria","Jan 2010",108.6
-"Austria","Jan 2011",107.1
-"Austria","Jan 2012",106.1
-"Austria","Jan 2013",103.8
-"Belgium","Jan 2007",100
-"Belgium","Jan 2008",101.5
-"Belgium","Jan 2009",106.5
-"Belgium","Jan 2010",104.4
-"Belgium","Jan 2011",104.7
-"Belgium","Jan 2012",104
-"Belgium","Jan 2013",102.4
-"Bulgaria","Jan 2007",100
-"Bulgaria","Jan 2008",116.3
-"Bulgaria","Jan 2009",125.6
-"Bulgaria","Jan 2010",129.5
-"Bulgaria","Jan 2011",127.5
-"Bulgaria","Jan 2012",128.1
-"Bulgaria","Jan 2013",132.4
-"Switzerland","Jan 2007",100
-"Switzerland","Jan 2008",98.6
-"Switzerland","Jan 2009",104.8
-"Switzerland","Jan 2010",103.2
-"Switzerland","Jan 2011",104.5
-"Switzerland","Jan 2012",108.7
-"Switzerland","Jan 2013",103.2
-"Cyprus","Jan 2007",100
-"Cyprus","Jan 2008",125
-"Cyprus","Jan 2009",135.1
-"Cyprus","Jan 2010",140.8
-"Cyprus","Jan 2011",146.3
-"Cyprus","Jan 2012",154.9
-"Cyprus","Jan 2013",149.8
-"Czech Republic","Jan 2007",100
-"Czech Republic","Jan 2008",108.7
-"Czech Republic","Jan 2009",117.8
-"Czech Republic","Jan 2010",122.5
-"Czech Republic","Jan 2011",131.4
-"Czech Republic","Jan 2012",132.7
-"Czech Republic","Jan 2013",136.6
-"Germany","Jan 2007",100
-"Germany","Jan 2008",101.5
-"Germany","Jan 2009",106.6
-"Germany","Jan 2010",105.2
-"Germany","Jan 2011",99.4
-"Germany","Jan 2012",98.5
-"Germany","Jan 2013",94.1
-"Denmark","Jan 2007",100
-"Denmark","Jan 2008",102.1
-"Denmark","Jan 2009",107.9
-"Denmark","Jan 2010",105.1
-"Denmark","Jan 2011",100.4
-"Denmark","Jan 2012",100.7
-"Denmark","Jan 2013",99.8
-"Estonia","Jan 2007",100
-"Estonia","Jan 2008",105.9
-"Estonia","Jan 2009",115.4
-"Estonia","Jan 2010",107.6
-"Estonia","Jan 2011",93.3
-"Estonia","Jan 2012",85.2
-"Estonia","Jan 2013",80.1
-"Spain","Jan 2007",100
-"Spain","Jan 2008",108.5
-"Spain","Jan 2009",115.5
-"Spain","Jan 2010",118.1
-"Spain","Jan 2011",118.6
-"Spain","Jan 2012",114.3
-"Spain","Jan 2013",106.5
-"Finland","Jan 2007",100
-"Finland","Jan 2008",102.7
-"Finland","Jan 2009",113.8
-"Finland","Jan 2010",118
-"Finland","Jan 2011",119.1
-"Finland","Jan 2012",124
-"Finland","Jan 2013",127.8
-"France","Jan 2007",100
-"France","Jan 2008",101.8
-"France","Jan 2009",105.8
-"France","Jan 2010",108.7
-"France","Jan 2011",109.3
-"France","Jan 2012",112
-"France","Jan 2013",110.5
-"United Kingdom","Jan 2007",100
-"United Kingdom","Jan 2008",113.2
-"United Kingdom","Jan 2009",121.1
-"United Kingdom","Jan 2010",117.5
-"United Kingdom","Jan 2011",112
-"United Kingdom","Jan 2012",109.9
-"United Kingdom","Jan 2013",103.4
-"Greece","Jan 2007",100
-"Greece","Jan 2008",102.4
-"Greece","Jan 2009",103.6
-"Greece","Jan 2010",134.2
-"Greece","Jan 2011",141.2
-"Greece","Jan 2012",124.1
-"Greece","Jan 2013",123.3
-"Croatia","Jan 2007",100
-"Croatia","Jan 2008",104.4
-"Croatia","Jan 2009",109.4
-"Croatia","Jan 2010",128.2
-"Croatia","Jan 2011",135.8
-"Croatia","Jan 2012",135.9
-"Croatia","Jan 2013",133
-"Hungary","Jan 2007",100
-"Hungary","Jan 2008",107.3
-"Hungary","Jan 2009",107.2
-"Hungary","Jan 2010",109.1
-"Hungary","Jan 2011",102.4
-"Hungary","Jan 2012",90.9
-"Hungary","Jan 2013",87.1
-"Ireland","Jan 2007",100
-"Ireland","Jan 2008",106.1
-"Ireland","Jan 2009",113.6
-"Ireland","Jan 2010",117.2
-"Ireland","Jan 2011",109.7
-"Ireland","Jan 2012",101.7
-"Ireland","Jan 2013",98.9
-"Iceland","Jan 2007",100
-"Iceland","Jan 2008",59.5
-"Iceland","Jan 2009",57.7
-"Iceland","Jan 2010",52.8
-"Iceland","Jan 2011",47.4
-"Iceland","Jan 2012",46.1
-"Iceland","Jan 2013",43.8
-"Italy","Jan 2007",100
-"Italy","Jan 2008",102.9
-"Italy","Jan 2009",110.5
-"Italy","Jan 2010",121.8
-"Italy","Jan 2011",122.5
-"Italy","Jan 2012",130.6
-"Italy","Jan 2013",130.8
-"Japan","Jan 2007",100
-"Japan","Jan 2008",101
-"Japan","Jan 2009",110.6
-"Japan","Jan 2010",109.8
-"Japan","Jan 2011",113
-"Japan","Jan 2012",116.3
-"Japan","Jan 2013",122.5
-"Lithuania","Jan 2007",100
-"Lithuania","Jan 2008",107.3
-"Lithuania","Jan 2009",116.9
-"Lithuania","Jan 2010",107.2
-"Lithuania","Jan 2011",95.7
-"Lithuania","Jan 2012",87.3
-"Lithuania","Jan 2013",85.7
-"Luxembourg","Jan 2007",100
-"Luxembourg","Jan 2008",101.2
-"Luxembourg","Jan 2009",103.1
-"Luxembourg","Jan 2010",99.7
-"Luxembourg","Jan 2011",90.8
-"Luxembourg","Jan 2012",89.1
-"Luxembourg","Jan 2013",86
-"Latvia","Jan 2007",100
-"Latvia","Jan 2008",99.9
-"Latvia","Jan 2009",105.4
-"Latvia","Jan 2010",100.1
-"Latvia","Jan 2011",87.9
-"Latvia","Jan 2012",70.3
-"Latvia","Jan 2013",65.4
-"Malta","Jan 2007",100
-"Malta","Jan 2008",105.9
-"Malta","Jan 2009",115.7
-"Malta","Jan 2010",114.5
-"Malta","Jan 2011",111.8
-"Malta","Jan 2012",111.5
-"Malta","Jan 2013",107.8
-"Netherlands","Jan 2007",100
-"Netherlands","Jan 2008",98.7
-"Netherlands","Jan 2009",111.6
-"Netherlands","Jan 2010",106.6
-"Netherlands","Jan 2011",106.6
-"Netherlands","Jan 2012",108.7
-"Netherlands","Jan 2013",104
-"Poland","Jan 2007",100
-"Poland","Jan 2008",130.4
-"Poland","Jan 2009",132.1
-"Poland","Jan 2010",136.4
-"Poland","Jan 2011",141.6
-"Poland","Jan 2012",137.3
-"Poland","Jan 2013",143.3
-"Portugal","Jan 2007",100
-"Portugal","Jan 2008",106.9
-"Portugal","Jan 2009",117.2
-"Portugal","Jan 2010",125.6
-"Portugal","Jan 2011",123.9
-"Portugal","Jan 2012",121.1
-"Portugal","Jan 2013",114.7
-"Romania","Jan 2007",100
-"Romania","Jan 2008",133.4
-"Romania","Jan 2009",148.6
-"Romania","Jan 2010",154.9
-"Romania","Jan 2011",155.7
-"Romania","Jan 2012",156.2
-"Romania","Jan 2013",149.6
-"Sweden","Jan 2007",100
-"Sweden","Jan 2008",103
-"Sweden","Jan 2009",110.1
-"Sweden","Jan 2010",108.9
-"Sweden","Jan 2011",110.2
-"Sweden","Jan 2012",113.1
-"Sweden","Jan 2013",111.6
-"Slovenia","Jan 2007",100
-"Slovenia","Jan 2008",106.4
-"Slovenia","Jan 2009",113.3
-"Slovenia","Jan 2010",118.4
-"Slovenia","Jan 2011",113.8
-"Slovenia","Jan 2012",114.4
-"Slovenia","Jan 2013",102.9
-"Slovak Republic","Jan 2007",100
-"Slovak Republic","Jan 2008",105.2
-"United States","Jan 2007",100
-"United States","Jan 2008",92
-"United States","Jan 2009",98.2
-"United States","Jan 2010",96.4
-"United States","Jan 2011",96.4
-"United States","Jan 2012",98.6
-"United States","Jan 2013",102
+country,iso2c,year,wdi_domestic_credit
+Austria,AT,Jan 2007,100
+Austria,AT,Jan 2008,102.9
+Austria,AT,Jan 2009,109.8
+Austria,AT,Jan 2010,108.6
+Austria,AT,Jan 2011,107.1
+Austria,AT,Jan 2012,106.1
+Austria,AT,Jan 2013,103.8
+Belgium,BE,Jan 2007,100
+Belgium,BE,Jan 2008,101.5
+Belgium,BE,Jan 2009,106.5
+Belgium,BE,Jan 2010,104.4
+Belgium,BE,Jan 2011,104.7
+Belgium,BE,Jan 2012,104
+Belgium,BE,Jan 2013,102.4
+Bulgaria,BG,Jan 2007,100
+Bulgaria,BG,Jan 2008,116.3
+Bulgaria,BG,Jan 2009,125.6
+Bulgaria,BG,Jan 2010,129.5
+Bulgaria,BG,Jan 2011,127.5
+Bulgaria,BG,Jan 2012,128.1
+Bulgaria,BG,Jan 2013,132.4
+Switzerland,CH,Jan 2007,100
+Switzerland,CH,Jan 2008,98.6
+Switzerland,CH,Jan 2009,104.8
+Switzerland,CH,Jan 2010,103.2
+Switzerland,CH,Jan 2011,104.5
+Switzerland,CH,Jan 2012,108.7
+Switzerland,CH,Jan 2013,103.2
+Cyprus,CY,Jan 2007,100
+Cyprus,CY,Jan 2008,125
+Cyprus,CY,Jan 2009,135.1
+Cyprus,CY,Jan 2010,140.8
+Cyprus,CY,Jan 2011,146.3
+Cyprus,CY,Jan 2012,154.9
+Cyprus,CY,Jan 2013,149.8
+Czech Republic,CZ,Jan 2007,100
+Czech Republic,CZ,Jan 2008,108.7
+Czech Republic,CZ,Jan 2009,117.8
+Czech Republic,CZ,Jan 2010,122.5
+Czech Republic,CZ,Jan 2011,131.4
+Czech Republic,CZ,Jan 2012,132.7
+Czech Republic,CZ,Jan 2013,136.6
+Germany,DE,Jan 2007,100
+Germany,DE,Jan 2008,101.5
+Germany,DE,Jan 2009,106.6
+Germany,DE,Jan 2010,105.2
+Germany,DE,Jan 2011,99.4
+Germany,DE,Jan 2012,98.5
+Germany,DE,Jan 2013,94.1
+Denmark,DK,Jan 2007,100
+Denmark,DK,Jan 2008,102.1
+Denmark,DK,Jan 2009,107.9
+Denmark,DK,Jan 2010,105.1
+Denmark,DK,Jan 2011,100.4
+Denmark,DK,Jan 2012,100.7
+Denmark,DK,Jan 2013,99.8
+Estonia,EE,Jan 2007,100
+Estonia,EE,Jan 2008,105.9
+Estonia,EE,Jan 2009,115.4
+Estonia,EE,Jan 2010,107.6
+Estonia,EE,Jan 2011,93.3
+Estonia,EE,Jan 2012,85.2
+Estonia,EE,Jan 2013,80.1
+Spain,ES,Jan 2007,100
+Spain,ES,Jan 2008,108.5
+Spain,ES,Jan 2009,115.5
+Spain,ES,Jan 2010,118.1
+Spain,ES,Jan 2011,118.6
+Spain,ES,Jan 2012,114.3
+Spain,ES,Jan 2013,106.5
+Finland,FI,Jan 2007,100
+Finland,FI,Jan 2008,102.7
+Finland,FI,Jan 2009,113.8
+Finland,FI,Jan 2010,118
+Finland,FI,Jan 2011,119.1
+Finland,FI,Jan 2012,124
+Finland,FI,Jan 2013,127.8
+France,FR,Jan 2007,100
+France,FR,Jan 2008,101.8
+France,FR,Jan 2009,105.8
+France,FR,Jan 2010,108.7
+France,FR,Jan 2011,109.3
+France,FR,Jan 2012,112
+France,FR,Jan 2013,110.5
+United Kingdom,GB,Jan 2007,100
+United Kingdom,GB,Jan 2008,113.2
+United Kingdom,GB,Jan 2009,121.1
+United Kingdom,GB,Jan 2010,117.5
+United Kingdom,GB,Jan 2011,112
+United Kingdom,GB,Jan 2012,109.9
+United Kingdom,GB,Jan 2013,103.4
+Greece,GR,Jan 2007,100
+Greece,GR,Jan 2008,102.4
+Greece,GR,Jan 2009,103.6
+Greece,GR,Jan 2010,134.2
+Greece,GR,Jan 2011,141.2
+Greece,GR,Jan 2012,124.1
+Greece,GR,Jan 2013,123.3
+Croatia,HR,Jan 2007,100
+Croatia,HR,Jan 2008,104.4
+Croatia,HR,Jan 2009,109.4
+Croatia,HR,Jan 2010,128.2
+Croatia,HR,Jan 2011,135.8
+Croatia,HR,Jan 2012,135.9
+Croatia,HR,Jan 2013,133
+Hungary,HU,Jan 2007,100
+Hungary,HU,Jan 2008,107.3
+Hungary,HU,Jan 2009,107.2
+Hungary,HU,Jan 2010,109.1
+Hungary,HU,Jan 2011,102.4
+Hungary,HU,Jan 2012,90.9
+Hungary,HU,Jan 2013,87.1
+Ireland,IE,Jan 2007,100
+Ireland,IE,Jan 2008,106.1
+Ireland,IE,Jan 2009,113.6
+Ireland,IE,Jan 2010,117.2
+Ireland,IE,Jan 2011,109.7
+Ireland,IE,Jan 2012,101.7
+Ireland,IE,Jan 2013,98.9
+Iceland,IS,Jan 2007,100
+Iceland,IS,Jan 2008,59.5
+Iceland,IS,Jan 2009,57.7
+Iceland,IS,Jan 2010,52.8
+Iceland,IS,Jan 2011,47.4
+Iceland,IS,Jan 2012,46.1
+Iceland,IS,Jan 2013,43.8
+Italy,IT,Jan 2007,100
+Italy,IT,Jan 2008,102.9
+Italy,IT,Jan 2009,110.5
+Italy,IT,Jan 2010,121.8
+Italy,IT,Jan 2011,122.5
+Italy,IT,Jan 2012,130.6
+Italy,IT,Jan 2013,130.8
+Japan,JP,Jan 2007,100
+Japan,JP,Jan 2008,101
+Japan,JP,Jan 2009,110.6
+Japan,JP,Jan 2010,109.8
+Japan,JP,Jan 2011,113
+Japan,JP,Jan 2012,116.3
+Japan,JP,Jan 2013,122.5
+Lithuania,LT,Jan 2007,100
+Lithuania,LT,Jan 2008,107.3
+Lithuania,LT,Jan 2009,116.9
+Lithuania,LT,Jan 2010,107.2
+Lithuania,LT,Jan 2011,95.7
+Lithuania,LT,Jan 2012,87.3
+Lithuania,LT,Jan 2013,85.7
+Luxembourg,LU,Jan 2007,100
+Luxembourg,LU,Jan 2008,101.2
+Luxembourg,LU,Jan 2009,103.1
+Luxembourg,LU,Jan 2010,99.7
+Luxembourg,LU,Jan 2011,90.8
+Luxembourg,LU,Jan 2012,89.1
+Luxembourg,LU,Jan 2013,86
+Latvia,LV,Jan 2007,100
+Latvia,LV,Jan 2008,99.9
+Latvia,LV,Jan 2009,105.4
+Latvia,LV,Jan 2010,100.1
+Latvia,LV,Jan 2011,87.9
+Latvia,LV,Jan 2012,70.3
+Latvia,LV,Jan 2013,65.4
+Malta,MT,Jan 2007,100
+Malta,MT,Jan 2008,105.9
+Malta,MT,Jan 2009,115.7
+Malta,MT,Jan 2010,114.5
+Malta,MT,Jan 2011,111.8
+Malta,MT,Jan 2012,111.5
+Malta,MT,Jan 2013,107.8
+Netherlands,NL,Jan 2007,100
+Netherlands,NL,Jan 2008,98.7
+Netherlands,NL,Jan 2009,111.6
+Netherlands,NL,Jan 2010,106.6
+Netherlands,NL,Jan 2011,106.6
+Netherlands,NL,Jan 2012,108.7
+Netherlands,NL,Jan 2013,104
+Poland,PL,Jan 2007,100
+Poland,PL,Jan 2008,130.4
+Poland,PL,Jan 2009,132.1
+Poland,PL,Jan 2010,136.4
+Poland,PL,Jan 2011,141.6
+Poland,PL,Jan 2012,137.3
+Poland,PL,Jan 2013,143.3
+Portugal,PT,Jan 2007,100
+Portugal,PT,Jan 2008,106.9
+Portugal,PT,Jan 2009,117.2
+Portugal,PT,Jan 2010,125.6
+Portugal,PT,Jan 2011,123.9
+Portugal,PT,Jan 2012,121.1
+Portugal,PT,Jan 2013,114.7
+Romania,RO,Jan 2007,100
+Romania,RO,Jan 2008,133.4
+Romania,RO,Jan 2009,148.6
+Romania,RO,Jan 2010,154.9
+Romania,RO,Jan 2011,155.7
+Romania,RO,Jan 2012,156.2
+Romania,RO,Jan 2013,149.6
+Sweden,SE,Jan 2007,100
+Sweden,SE,Jan 2008,103
+Sweden,SE,Jan 2009,110.1
+Sweden,SE,Jan 2010,108.9
+Sweden,SE,Jan 2011,110.2
+Sweden,SE,Jan 2012,113.1
+Sweden,SE,Jan 2013,111.6
+Slovenia,SI,Jan 2007,100
+Slovenia,SI,Jan 2008,106.4
+Slovenia,SI,Jan 2009,113.3
+Slovenia,SI,Jan 2010,118.4
+Slovenia,SI,Jan 2011,113.8
+Slovenia,SI,Jan 2012,114.4
+Slovenia,SI,Jan 2013,102.9
+Slovak Republic,SK,Jan 2007,100
+Slovak Republic,SK,Jan 2008,105.2
+United States,US,Jan 2007,100
+United States,US,Jan 2008,92
+United States,US,Jan 2009,98.2
+United States,US,Jan 2010,96.4
+United States,US,Jan 2011,96.4
+United States,US,Jan 2012,98.6
+United States,US,Jan 2013,102

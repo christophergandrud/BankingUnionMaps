@@ -81,6 +81,7 @@ svg.call(tip);
 // Get the data
 d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
     data.forEach(function(d) {
+        d.country = +d.country;
         d.year = parseDate(d.year);
         d.wdi_domestic_credit = +d.wdi_domestic_credit;
     });
@@ -91,7 +92,7 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
 
     // Nest the entries by country
     var dataNest = d3.nest()
-        .key(function(d) {return d.country;})
+        .key(function(d) {return d.iso2c;})
         .entries(data);
 
     // Loop through each country / key
