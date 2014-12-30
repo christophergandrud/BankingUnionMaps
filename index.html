@@ -31,7 +31,6 @@ path {
 
 <!-- load the d3.js library -->
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
 <script>
 
@@ -68,20 +67,9 @@ var svg = d3.select("body")
         .attr("transform",
               "translate(" + margin.left + "," + margin.top + ")");
 
-// Country tool tip
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([0, -5])
-    .html(function(d) {
-        return "<span style='color:steelblue'>" + d.country + "</span>";
-})
-
-svg.call(tip);
-
 // Get the data
 d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
     data.forEach(function(d) {
-        d.country = +d.country;
         d.year = parseDate(d.year);
         d.wdi_domestic_credit = +d.wdi_domestic_credit;
     });
@@ -92,35 +80,41 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
 
     // Nest the entries by country
     var dataNest = d3.nest()
-        .key(function(d) {return d.iso2c;})
+        .key(function(d) {return d.country;})
         .entries(data);
+        console.log("Data", dataNest);
 
     // Loop through each country / key
     dataNest.forEach(function(d) {
 
-        var main = svg.selectAll(".main")
-            .data(".main")
-            .enter().append("svg");
-
-        main.append("path")
+        svg.append("path")
             .attr("class", "line")
             .attr("d", priceline(d.values))
             .style("stroke-opacity", 0.2)
             .style("stroke-width", 1)
-            .on("mouseover", function(d) {
-                d3.select(this)
+            .on("mouseover", mouseover)
+            .on("mouseout", mouseout)
+        ;
+        svg.append("text")
+            .attr("class", "country-label")
+            .attr("x", 50)
+            .style("opacity", 0.1)
+            .text(d.key)
+            .on("mouseover", mouseover);
+
+        function mouseover(){
+            d3.select(this)
                 .style("stroke-opacity", 1)
                 .style("stroke-width", 10);
-            ;
-            })
-            .on("mouseout", function(d) {
-                d3.select(this)
+                d3.select(this).select("text")
+                .style("font-opeacity", 1);
+            }
+        function mouseout(){
+            d3.select(this)
                 .transition().duration(750)
                 .style("stroke-opacity", 0.2)
-                .style("stroke-width", 1)
-                ;
-            })
-        ;
+                .style("stroke-width", 1);
+        }
     });
 
     // Add the X Axis
