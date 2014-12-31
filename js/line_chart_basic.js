@@ -50,7 +50,7 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
 
     // Loop through each country / key
     dataNest.forEach(function(d) {
-        var position = d.values[6].credit;
+        var position = d.values[d.values.length-1].credit;
         console.log("Selected Value", position);
 
         svg.append("path")
@@ -63,18 +63,17 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
         ;
         svg.append("text")
             .attr("class", "country-label")
-            .attr("x", 0)
+            .attr("x", 5)
             .attr("y", y(position))
-            .style("opacity", 0.5)
-            .text(d.key)
-            .on("mouseover", mouseover);
+            .style("opacity", 0)
+            .text(d.key);
 
         function mouseover(){
             d3.select(this)
                 .style("stroke-opacity", 1)
                 .style("stroke-width", 10);
-                d3.select(this).select("text")
-                .style("font-opeacity", 1);
+            d3.select(this).select("text")
+                .style("opeacity", 1);
             }
         function mouseout(){
             d3.select(this)
