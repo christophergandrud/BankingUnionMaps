@@ -70,6 +70,7 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
 
         function mouseover(){
             d3.select(this)
+                .style("stroke", "red")
                 .style("stroke-opacity", 1)
                 .style("stroke-width", 10);
             d3.select(this).select("text")
@@ -78,6 +79,7 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
         function mouseout(){
             d3.select(this)
                 .transition().duration(750)
+                .style("stroke", "steelblue")
                 .style("stroke-opacity", 0.2)
                 .style("stroke-width", 1);
         }
