@@ -80,14 +80,14 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
             .on("mouseover", mouseover)
             .on("mouseout", mouseout);
 
+        // Add text when line is moused over
         lineText
             .append("text")
             .attr("class", "country-label")
             .attr("x", 5)
             .attr("y", y(position))
-            .style("font-size", "15px")
             .style("font-weight", 900)
-            .style("fill", "#f03b20")
+            .style("fill", "#d95f0e")
             .style("opacity", 0.0)
             .text(d.key);
 
@@ -127,8 +127,6 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
         .attr("y", 6)
         .attr("dy", "-4em")
         .style("text-anchor", "end")
-        .style("font-size", 15)
         .text("Domestic Credit Provided by the Financial Sector");
-
 
 });
