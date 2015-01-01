@@ -32,7 +32,7 @@ var priceline = d3.svg.line()
     });
 
 // Adds the svg canvas
-var svg = d3.select("body")
+var svgChart = d3.select("#chart")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -67,12 +67,14 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
 
         var position = d.values[d.values.length - 1].credit;
 
-        var lineText = svg.append("g");
+        var lineText = svgChart.append("g");
 
         lineText
             .append("path")
             .attr("class", "line")
             .attr("d", priceline(d.values))
+            .style("stroke", "steelblue")
+            .style("fill", "none")
             .style("stroke-opacity", 0.2)
             .style("stroke-width", 1);
 
@@ -113,13 +115,13 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
     });
 
     // Add the X Axis
-    svg.append("g")
+    svgChart.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
 
     // Add Y Axis label
-    svg.append("g")
+    svgChart.append("g")
         .attr("class", "y axis")
         .call(yAxis)
         .append("text")

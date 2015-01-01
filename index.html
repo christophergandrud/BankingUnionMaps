@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<style>
-/* set the CSS */
-body {
-    font: 15px Arial;
-}
-path {
-    stroke: steelblue;
-    fill: none;
-}
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-</style>
+    <meta charset="utf-8">
+    <style>
+        /* set the CSS */
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: grey;
+            stroke-width: 1;
+            shape-rendering: crispEdges;
+        }
+    </style>
 
 </head>
 
 <body>
 
-    <h1>Test Interacative Graphic</h1>
-
     <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="js/line_chart_basic.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+    <h1>European Banking Union</h1>
+
+    <div id="map">
+        <script src="js/BankingUnionMap.js"></script>
+    </div>
+
+<h1>Credit Provision</h1>
+
+    <div id="chart">
+        <script src="js/line_chart_basic.js"></script>
+    </div>
 
 </body>
 
