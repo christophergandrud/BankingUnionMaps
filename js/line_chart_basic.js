@@ -83,8 +83,11 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
         lineText
             .append("text")
             .attr("class", "country-label")
-            .attr("x", 0)
+            .attr("x", 5)
             .attr("y", y(position))
+            .style("font-size", "15px")
+            .style("font-weight", 900)
+            .style("fill", "#f03b20")
             .style("opacity", 0.0)
             .text(d.key);
 
@@ -126,5 +129,6 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
         .style("text-anchor", "end")
         .style("font-size", 15)
         .text("Domestic Credit Provided by the Financial Sector");
+
 
 });
