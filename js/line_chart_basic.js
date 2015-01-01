@@ -1,5 +1,10 @@
 // Set the dimensions of the canvas / graph
-var margin = {top: 30, right: 20, bottom: 30, left: 100},
+var margin = {
+        top: 30,
+        right: 20,
+        bottom: 30,
+        left: 100
+    },
     width = 700 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -19,17 +24,21 @@ var yAxis = d3.svg.axis().scale(y)
 
 // Define the line
 var priceline = d3.svg.line()
-    .x(function(d) { return x(d.year); })
-    .y(function(d) { return y(d.credit); });
+    .x(function(d) {
+        return x(d.year);
+    })
+    .y(function(d) {
+        return y(d.credit);
+    });
 
 // Adds the svg canvas
 var svg = d3.select("body")
     .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
     .append("g")
-        .attr("transform",
-              "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
 
 // Get the data
 d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
@@ -39,49 +48,64 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
     });
 
     // Scale the range of the data
-    x.domain(d3.extent(data, function(d) { return d.year; }));
-    y.domain([0, d3.max(data, function(d) { return d.credit; })]);
+    x.domain(d3.extent(data, function(d) {
+        return d.year;
+    }));
+    y.domain([0, d3.max(data, function(d) {
+        return d.credit;
+    })]);
 
     // Nest the entries by country
     var dataNest = d3.nest()
-        .key(function(d) {return d.country;})
+        .key(function(d) {
+            return d.country;
+        })
         .entries(data);
-        console.log("Data", dataNest);
 
     // Loop through each country / key
     dataNest.forEach(function(d) {
-        var position = d.values[d.values.length-1].credit;
-        console.log("Selected Value", position);
 
-        svg.append("path")
+        var position = d.values[d.values.length - 1].credit;
+
+        var lineText = svg.append("g");
+
+        lineText
+            .append("path")
             .attr("class", "line")
             .attr("d", priceline(d.values))
             .style("stroke-opacity", 0.2)
-            .style("stroke-width", 1)
+            .style("stroke-width", 1);
+
+        lineText
             .on("mouseover", mouseover)
-            .on("mouseout", mouseout)
-        ;
-        svg.append("text")
+            .on("mouseout", mouseout);
+
+        lineText
+            .append("text")
             .attr("class", "country-label")
-            .attr("x", 5)
+            .attr("x", 0)
             .attr("y", y(position))
-            .style("opacity", 0)
+            .style("opacity", 0.0)
             .text(d.key);
 
-        function mouseover(){
-            d3.select(this)
-                .style("stroke", "red")
+        function mouseover() {
+            d3.select(this).select("path")
                 .style("stroke-opacity", 1)
                 .style("stroke-width", 10);
+
             d3.select(this).select("text")
-                .style("opeacity", 1);
-            }
-        function mouseout(){
-            d3.select(this)
+                .style("opacity", 1.0);
+        }
+
+        function mouseout() {
+            d3.select(this).select("path")
                 .transition().duration(750)
-                .style("stroke", "steelblue")
                 .style("stroke-opacity", 0.2)
                 .style("stroke-width", 1);
+
+            d3.select(this).select("text")
+                .transition().duration(750)
+                .style("opacity", 0.0);
         }
     });
 
