@@ -129,6 +129,6 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
         .attr("y", 6)
         .attr("dy", "-4em")
         .style("text-anchor", "end")
-        .text("Domestic Credit Provided by the Financial Sector");
+        .text("Change in Domestic Credit Provided by the Financial Sector from 2007");
 
 });
