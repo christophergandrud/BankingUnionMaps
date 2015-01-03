@@ -37,7 +37,6 @@ d3.json("json/europeClean.json", function(error, europe) {
             .data(topojson.feature(europe, europe.objects.subunits).features)
             .enter().append("path")
             .attr("d", path)
-            //            .attr("class", function(d) { return "subunit " + d.id; })
             .style("fill", function(d) {
                 return color(rateById[d.id]);
             });

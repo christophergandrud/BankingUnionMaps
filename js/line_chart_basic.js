@@ -69,7 +69,17 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
 
         var lineText = svgChart.append("g");
 
-        lineText
+        if (d.key == "United States" || d.key == "Japan") {
+            lineText
+            .append("path")
+            .attr("class", "line")
+            .attr("d", priceline(d.values))
+            .style("stroke", "red")
+            .style("fill", "none")
+            .style("stroke-opacity", 0.2)
+            .style("stroke-width", 5);
+        } else {
+            lineText
             .append("path")
             .attr("class", "line")
             .attr("d", priceline(d.values))
@@ -77,6 +87,7 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
             .style("fill", "none")
             .style("stroke-opacity", 0.2)
             .style("stroke-width", 1);
+}
 
         lineText
             .on("mouseover", mouseover)
