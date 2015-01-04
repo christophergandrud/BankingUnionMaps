@@ -71,27 +71,23 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
 
         if (d.key == "United States" || d.key == "Japan") {
             lineText
-            .append("path")
-            .attr("class", "line")
-            .attr("d", priceline(d.values))
-            .style("stroke", "red")
-            .style("fill", "none")
-            .style("stroke-opacity", 0.2)
-            .style("stroke-width", 5);
+                .append("path")
+                .attr("class", "line")
+                .attr("d", priceline(d.values))
+                .style("stroke", "red")
+                .style("fill", "none")
+                .style("stroke-opacity", 0.2)
+                .style("stroke-width", 5);
         } else {
             lineText
-            .append("path")
-            .attr("class", "line")
-            .attr("d", priceline(d.values))
-            .style("stroke", "steelblue")
-            .style("fill", "none")
-            .style("stroke-opacity", 0.2)
-            .style("stroke-width", 1);
-}
-
-        lineText
-            .on("mouseover", mouseover)
-            .on("mouseout", mouseout);
+                .append("path")
+                .attr("class", "line")
+                .attr("d", priceline(d.values))
+                .style("stroke", "steelblue")
+                .style("fill", "none")
+                .style("stroke-opacity", 0.2)
+                .style("stroke-width", 1);
+        }
 
         // Add text when line is moused over
         lineText
@@ -103,6 +99,11 @@ d3.csv("csv/WorldBankData_noNA.csv", function(error, data) {
             .style("fill", "#d95f0e")
             .style("opacity", 0.0)
             .text(d.key);
+
+        // Mouseover functionality
+        lineText
+            .on("mouseover", mouseover)
+            .on("mouseout", mouseout);
 
         function mouseover() {
             d3.select(this).select("path")

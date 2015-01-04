@@ -1,35 +1,35 @@
-"country","iso2c","id","membership"
-"Austria","AT","AUT",3
-"Belgium","BE","BEL",3
-"Bulgaria","BG","BGR",2
-"Switzerland","CH","CHE",1
-"Cyprus","CY","CYP",3
-"Czech Republic","CZ","CZE",2
-"Germany","DE","DEU",3
-"Denmark","DK","DN1",2
-"Estonia","EE","EST",3
-"Finland","FI","FI1",3
-"France","FR","FR1",3
-"Spain","ES","ESP",3
-"United Kingdom","GB","GB1",2
-"Greece","GR","GRC",3
-"Croatia","HR","HRV",2
-"Hungary","HU","HUN",2
-"Iceland","IS","ISL",1
-"Ireland","IE","IRL",3
-"Italy","IT","ITA",3
-"Latvia","LV","LVA",3
-"Liechtenstein","LI","LIE",1
-"Lithuania","LT","LTU",3
-"Luxembourg","LU","LUX",3
-"Malta","MT","MLT",3
-"Netherlands","NL","NL1",3
-"Norway","NO","NOR",1
-"Poland","PL","POL",2
-"Portugal","PT","PRT",3
-"Romania","RO","ROU",2
-"Slovakia","SK","SVK",3
-"Slovenia","SI","SVN",3
-"Sweden","SE","SWE",2
-"United States","US","USA",0
-"Japan","JP","JPN",0
+"country","iso2c","id","membership","grouping"
+"Austria","AT","AUT","SSM","Western Europe"
+"Belgium","BE","BEL","SSM","Western Europe"
+"Bulgaria","BG","BGR","EU Non-SSM","Southeastern/Balkan Europe"
+"Switzerland","CH","CHE","EEA/Other","Western Europe"
+"Cyprus","CY","CYP","SSM","Southeastern/Balkan Europe"
+"Czech Republic","CZ","CZE","EU Non-SSM","Central and Eastern Europe"
+"Germany","DE","DEU","SSM","Western Europe"
+"Denmark","DK","DN1","EU Non-SSM","Nordic"
+"Estonia","EE","EST","SSM","Baltic"
+"Finland","FI","FI1","SSM","Nordic"
+"France","FR","FR1","SSM","Western Europe"
+"Spain","ES","ESP","SSM","Southern Europe"
+"United Kingdom","GB","GB1","EU Non-SSM","Western Europe"
+"Greece","GR","GRC","SSM","Southern"
+"Croatia","HR","HRV","EU Non-SSM","Southeastern/Balkan Europe"
+"Hungary","HU","HUN","EU Non-SSM","Central and Eastern Europe"
+"Iceland","IS","ISL","EEA/Other","Nordic"
+"Ireland","IE","IRL","SSM","Western Europe"
+"Italy","IT","ITA","SSM","Southern Europe"
+"Latvia","LV","LVA","SSM","Baltic"
+"Liechtenstein","LI","LIE","EEA/Other","Western Europe"
+"Lithuania","LT","LTU","SSM","Baltic"
+"Luxembourg","LU","LUX","SSM","Western Europe"
+"Malta","MT","MLT","SSM","Southern"
+"Netherlands","NL","NL1","SSM","Western Europe"
+"Norway","NO","NOR","EEA/Other","Nordic"
+"Poland","PL","POL","EU Non-SSM","Central and Eastern Europe"
+"Portugal","PT","PRT","SSM","Southern"
+"Romania","RO","ROU","EU Non-SSM","Central and Eastern Europe"
+"Slovakia","SK","SVK","SSM","Central and Eastern Europe"
+"Slovenia","SI","SVN","SSM","Southeastern/Balkan Europe"
+"Sweden","SE","SWE","EU Non-SSM","Nordic"
+"United States","US","USA","Non-Europe","Non-Europe"
+"Japan","JP","JPN","Non-Europe","Non-Europe"

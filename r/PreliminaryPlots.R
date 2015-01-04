@@ -1,7 +1,7 @@
 ######################################
 # Banking Union Preliminary Data Plots
 # Christopher Gandrud
-# 28 December 2014
+# 4 January 2015
 ######################################
 
 # Set working directory. Change as needed.
@@ -28,18 +28,18 @@ standardise100 <- function(data, variable, times){
 main <- read.csv('csv/WorldBankData.csv', stringsAsFactors = FALSE)
 
 #### Summarize data ####
-ssm <- subset(main, membership == 3 | country == "United States")
+ssm <- subset(main, membership == 'SSM' | country == "United States")
 
 main$domestic_credit_100 <- standardise100(main, variable = 'wdi_domestic_credit', 
-                          times = 2007:2013)
+                          times = 2005:2013)
 
 main_domestic_credit <- select(main, country, year, membership, domestic_credit_100)
 
-ssm_average <- main %>% filter(membership == 3) %>% group_by(year) %>%
+ssm_average <- main %>% filter(membership == 'SSM') %>% group_by(year) %>%
                 summarize(domestic_credit_100 = 
                           median(domestic_credit_100, na.rm = TRUE))
 ssm_average$country <- "SSM Median" 
-ssm_average$membership <- 3
+ssm_average$membership <- "SSM"
 
 main_domestic_credit <- rbind(main_domestic_credit, ssm_average)
 

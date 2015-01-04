@@ -1,7 +1,7 @@
 ######################################
 # Banking Union Data Gathering
 # Christopher Gandrud
-# 28 December 2014
+# 4 January 2015
 ######################################
 
 # Set working directory. Change as needed.
@@ -28,7 +28,7 @@ wdi_indicators <- c('NY.GDP.MKTP.KD.ZG', 'FB.AST.NPER.ZS', 'FR.INR.RISK',
                     'FS.AST.DOMS.GD.ZS', 'FD.RES.LIQU.AS.ZS')
 
 wdi <- WDI(country = countries, indicator = wdi_indicators, 
-           start = 2007, end = 2013)
+           start = 2005, end = 2013)
 
 wdi <- rename(wdi, wdi_gdp_growth = NY.GDP.MKTP.KD.ZG, 
               wdi_npl_ratio = FB.AST.NPER.ZS, 
