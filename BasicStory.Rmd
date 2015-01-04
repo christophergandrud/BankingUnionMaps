@@ -1,0 +1,102 @@
+---
+title: '(Incomplete) Pitch Skeleton Story'
+date: '4 January 2014'
+output:
+    html_document:
+        theme: "cosmo"
+---
+
+```{r include=FALSE}
+# Load packages
+library(dplyr)
+library(ggplot2)
+library(gridExtra)
+
+# Load data
+main <- read.csv('csv/WorldBankData.csv', stringsAsFactors = FALSE)
+```
+
+Banks in Europe have been increasing their capital ratios, starting from a
+low level relative to US banks . . .
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center'}
+#### Capital/Assets ####
+capital_assets <- main %>% filter(grouping != "Non-Europe") %>%
+                    group_by(grouping, year) %>%
+                    summarise(median_capital_assets = median(wdi_capital_assets,
+                                                             na.rm = TRUE))
+US <- main %>% filter(country == "United States") %>%
+                select(year, wdi_capital_assets)
+US$grouping <- "United States"
+US <- rename(US, median_capital_assets = wdi_capital_assets)
+capital_assets <- rbind(capital_assets, US)
+capital_assets$diff <- 'Not US'
+capital_assets$diff[capital_assets$grouping == 'United States'] <- 'US'
+
+ggplot(capital_assets, aes(year, median_capital_assets, color = grouping,
+        linetype = diff)) +
+    geom_line(size = 2) +
+    scale_color_brewer(palette = 'Set2') +
+    xlab('') + ylab('Capital to asset ratio (%)\n') +
+    guides(color = guide_legend(title = NULL), linetype = FALSE) +
+    theme_bw()
+```
+*Source: World Bank*
+
+---
+
+. . . to meet regulatory requirements and cover growing non-performing loan ratios.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center'}
+#### NPLs ####
+npls <- main %>% filter(grouping != "Non-Europe") %>%
+    group_by(grouping, year) %>%
+    summarise(median_npls = median(wdi_npl_ratio,
+        na.rm = TRUE))
+US <- main %>% filter(country == "United States") %>%
+    select(year, wdi_npl_ratio)
+US$grouping <- "United States"
+US <- rename(US, median_npls = wdi_npl_ratio)
+npls <- rbind(npls, US)
+
+npls$diff <- 'Not US'
+npls$diff[npls$grouping == 'United States'] <- 'US'
+
+ggplot(npls, aes(year, median_npls, color = grouping,
+        linetype = diff)) +
+    geom_line(size = 2) +
+    scale_color_brewer(palette = 'Set2') +
+    xlab('') + ylab('Non-performing loan ratio\n') +
+    guides(color = guide_legend(title = NULL), linetype = FALSE) +
+    theme_bw()
+```
+*Source: World Bank*
+
+---
+
+Increasing capitalisation has often led to stagnant and contracting lending in Europe.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.align='center'}
+#### Lending ####
+lending <- main %>% filter(grouping != "Non-Europe") %>%
+            group_by(grouping, year) %>%
+            summarise(median_domestic_credit = median(wdi_domestic_credit,
+                na.rm = TRUE))
+US <- main %>% filter(country == "United States") %>%
+        select(year, wdi_domestic_credit)
+US$grouping <- "United States"
+US <- rename(US, median_domestic_credit = wdi_domestic_credit)
+lending <- rbind(lending, US)
+
+lending$diff <- 'Not US'
+lending$diff[lending$grouping == 'United States'] <- 'US'
+
+ggplot(lending, aes(year, median_domestic_credit, color = grouping,
+    linetype = diff)) +
+    geom_line(size = 2) +
+    scale_color_brewer(palette = 'Set2') +
+    xlab('') + ylab('Domestic credit provided by financial sector\n (% of GDP)\n') +
+    guides(color = guide_legend(title = NULL), linetype = FALSE) +
+    theme_bw()
+```
+*Source: World Bank*
