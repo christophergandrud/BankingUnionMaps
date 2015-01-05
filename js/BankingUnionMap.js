@@ -8,7 +8,7 @@ var projection = d3.geo.mercator()
     .translate([width / 2, height / 2]);
 
 var color = d3.scale.ordinal()
-    .domain([0, 1, 2, 3])
+    .domain([0, "EEA/Other", "EU Non-SSM", "SSM"])
     .range(["#fff", "#c6dbef", "#6baed6", "#3182bd"]);
 
 
