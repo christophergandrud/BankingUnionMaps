@@ -3,7 +3,7 @@ title: '(Incomplete) Pitch Skeleton Story'
 date: '4 January 2014'
 output:
     html_document:
-        theme: "cosmo"
+        css: css/Tier1Main.css
 ---
 
 ```{r include=FALSE}
