@@ -1,6 +1,6 @@
 ---
 title: '(Incomplete) Pitch Skeleton Story'
-date: '4 January 2014'
+date: '5 January 2014'
 output:
     html_document:
         css: css/Tier1Main.css
@@ -66,7 +66,7 @@ ggplot(npls, aes(year, median_npls, color = grouping,
         linetype = diff)) +
     geom_line(size = 2) +
     scale_color_brewer(palette = 'Set2') +
-    xlab('') + ylab('Non-performing loan ratio\n') +
+    xlab('') + ylab('Non-performing loan ratio (%)\n') +
     guides(color = guide_legend(title = NULL), linetype = FALSE) +
     theme_bw()
 ```
