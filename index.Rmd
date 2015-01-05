@@ -1,0 +1,47 @@
+---
+title: "Bankind Union Maps Test"
+date: "5 January 2015"
+output: 
+    html_document:
+        css: css/Tier1Main.css
+---
+
+<style>
+/* set the CSS */
+.axis path,
+.axis line {
+fill: none;
+stroke: grey;
+stroke-width: 1;
+shape-rendering: crispEdges;
+}
+</style>
+<LINK href="css/Tier1Main.css"></LINK>
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+
+## European Banking Union
+
+<div id="map">
+<script src="js/BankingUnionMap.js"></script>
+</div>
+
+The European Banking Union really is two groups of countries. The first consists
+of countries that that have signed on to all of the Banking Union provisions. 
+They have their largest banks supervised by the ECB under the Single Supervisory
+Mechanism (SSM). Bank failures for these banks (and other banks that the ECB
+deems to be systemically important) are managed under the Single Resolution 
+Mechanism (SRM). These countries are also part of the European Stability Mechanism
+(ESM). Currently, only Eurozone members are in the full Banking Union.
+
+Other countries in the EU are in a weaker Banking Union. These countries interact
+with the Eurpean Banking Authority (EBA). Resolution of their failed banks is 
+done under the Banking Recovery and Resolution Directive (BRRD).
+
+## Credit Provision
+
+<div id="chart">
+<script src="js/line_chart_basic.js"></script>
+</div>

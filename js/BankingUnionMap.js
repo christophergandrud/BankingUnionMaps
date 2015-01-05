@@ -1,9 +1,9 @@
-var width = 700,
-    height = 1160;
+var width = 800,
+    height = 600;
 
 var projection = d3.geo.mercator()
-    .center([20, 39])
-    .scale(800)
+    .center([24, 52])
+    .scale(700)
     .rotate([15, 0])
     .translate([width / 2, height / 2]);
 
